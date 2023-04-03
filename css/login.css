@@ -1,0 +1,14 @@
+.container{
+    background-color: var(--cor3);
+    padding: 10px;
+    margin-top: 5%;
+}
+
+#autenticarBt, #criaConta, #esqueceConta{
+    background: var(--cor1);
+    border: none;
+}
+
+#autenticarBt:hover, #criaConta:hover, #esqueceConta:hover{
+    background: var(--cor5); 
+}
