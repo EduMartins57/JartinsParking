@@ -1,7 +1,18 @@
-.container{
-    background-color: var(--cor3);
-    padding: 10px;
-    margin-top: 5%;
+html{
+    background-color: var(--cor5);
+}
+h1, h3{
+    font-family: cursive;
+}
+
+label{
+    font-weight: bold;
+}
+
+#background{
+    background-color: var(--cor5);
+    width: 50%;
+    margin-left: 25%;
 }
 
 #autenticarBt, #criaConta, #esqueceConta{
@@ -11,4 +22,16 @@
 
 #autenticarBt:hover, #criaConta:hover, #esqueceConta:hover{
     background: var(--cor5); 
+}
+
+.container {
+    background-color: var(--cor3);
+    border: 1px solid;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 25px;
+}
+
+#color:focus-within{
+    border: 2px solid var(--cor1);
 }

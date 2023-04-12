@@ -4,6 +4,7 @@
 <?php
 	
 	$tipo = $_POST['tipo'];
+	$nome = $_POST['nome'];
 	$login =  $_POST['login'];
 	$senha =  $_POST['senha'];
 
@@ -15,6 +16,6 @@
 
 	include "conecta.php";
 	$senha=md5($senha);
-	$query = "insert into Usuario (tipo, login, senha) values ('$tipo','$login','$senha')";
+	$query = "insert into Usuario (tipo, nome, login, senha) values ('$tipo','$nome','$login','$senha')";
 	mysqli_query($conn,$query) or die(mysqli_error($conn));
 	include "sucesso.php";

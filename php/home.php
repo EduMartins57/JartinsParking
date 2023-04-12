@@ -1,37 +1,39 @@
-<!DOCTYPE HTML>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-    <title>Menu Dropdown Horizontal - Linha de Código</title>
-     <!-- Aqui chamamos o nosso arquivo css externo -->
-    <link rel="stylesheet" type="text/css"  href="home.css" />
-    <!--[if lte IE 8]>
- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
- <![endif]-->
-</head>
-<body>
-<nav>
-  <ul class="menu">
-		<li><a href="#">Home</a></li>
-		<li><a href="#">Sobre</a></li>
-	  		<li><a href="#">Carros</a>
-	         	<ul>
-	                  <li><a href="#">Registros</a></li>
-	       		</ul>
-			</li>
-		<li><a href="#">Tarifas</a>
-        <ul>
-	                  <li><a href="#">Alteração</a></li>
-                      <li><a href="#">Histórico</a></li>
-	       		</ul>
-        </li>
-        <li><a href="#">Lojas</a>
-        <ul>
-	                  <li><a href="#">Lojas conveniadas</a></li>
-	       		</ul>
-        </li>
-		<li><a href="#">Contato</a></li>
-</ul>
-</nav>
+<link rel="stylesheet" href="../css/all.css">
+<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="../css/home.css">
+
+<body id="background">
+    <?php
+        session_start();
+        include "cabecalho.php";
+    ?>
+    <form action="" id="form">
+        <h1 class="text-center" id="title">Jartins Parking</h1>
+    <?php 
+        if (isset($_SESSION['nome'])){
+
+            echo '<div class="alert alert-success" role="alert" id="home"><h4 class="alert-heading" id="h4">Bem-vindo '.$_SESSION['nome'].'!! </h4>';
+        }
+        else{
+            echo '<div class="alert alert-warning" role="alert" id="form">
+            <h4 class="alert-heading" id="h4">Você não está autenticado </h4>
+            <p> Continue para a tela de login</p>';
+        }
+    ?>
+	
+		<p class="text-center">
+            <a class="btn btn-lg btn-block btn-secondary" id="loginButton" href="cadastroVeiculo.php">Cadastro de Veiculo</a>
+        </p>
+
+		<p class="text-center">
+            <a class="btn btn-lg btn-block btn-secondary" id="loginButton" href="listarVeiculos.php">Visualizar Veiculos</a>
+        </p>
+
+        <p class="text-center">
+            <a class="btn btn-lg btn-block btn-secondary" id="loginButton" href="login.php">Continua</a>
+        </p>
+    <?php
+    include "rodape.php";
+    ?>
+    </form>
 </body>
-</html>

@@ -24,6 +24,7 @@
 		$_SESSION["login"]=$usuario['login'];
 		$_SESSION["senha"]=$usuario['senha'];
 		$_SESSION["tipo"]=$usuario['tipo'];
+		$_SESSION["nome"]=$usuario['nome'];
 	 	header("Location:login.php");
 	}
 	else

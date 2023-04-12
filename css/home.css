@@ -1,19 +1,10 @@
-*{margin: 0; padding: 0;}
-
-body{
-font-family: arial, helvetica, sans-serif;
-font-size: 12px;
+#home{
+    background-color: var(--cor03);
+    border: none;
 }
 
-.menu{
-list-style:none;
-border:1px solid #c0c0c0;
-float:left;
+#h4{
+    color: black;
 }
-.menu li{
-    position:relative;
-    float:left;
-    border-right:1px solid #c0c0c0;
-    }
- 
-    
+
+

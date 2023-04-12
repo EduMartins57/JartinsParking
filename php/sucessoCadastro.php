@@ -5,9 +5,9 @@
 	<?php
 		include "cabecalho.php";
 	?>
-		<h1 class="text-center" id="title">Autenticação</h1>
+		<h1 class="text-center" id="title">Cadastro no estacionamento</h1>
 		<h3 class="text-center alert alert-success" id="displayName">Sucesso</h3>
-		<p class="text-center">
+        <button type="submit" class="btn btn-lg btn-block btn-primary" id="vsVeiculo" href="listarVeiculos.php">Visualizar veículos</button>
 	<?php
 		include "rodape.php";
 	?>
