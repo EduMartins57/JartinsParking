@@ -30,7 +30,7 @@ Instruções podem ser achadas nesta [página](https://docs.github.com/pt/reposi
 
 ## ✒️ Autores
 
-* **[Aline Jardin](https://github.com/AlineJardim1570)** - *Desenvolvimento* 
+* **[Aline Jardim](https://github.com/AlineJardim1570)** - *Desenvolvimento* 
 * **[Eduardo Martins](https://github.com/EduMartins57)** - *Desenvolvimento* 
 
 ## 📄 Licença
