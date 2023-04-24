@@ -1,0 +1,8 @@
+#autenticarBt, #criaConta, #esqueceConta{
+    background: var(--cor1);
+    border: none;
+}
+
+#autenticarBt:hover, #criaConta:hover, #esqueceConta:hover{
+    background: var(--cor5); 
+}

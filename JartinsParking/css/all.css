@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;600&display=swap');
+
+:root{
+    --cor1: #3E7032;
+    --cor2: #C1F2B6;
+    --cor3: #86F06D;
+    --cor4: #597054;
+    --cor5: #68BD55;
+
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque: 'Bebas Neue', 'cursiva';
+    --font-destaque01: 'MuseoModerno', 'cursiva';
+
+}
+

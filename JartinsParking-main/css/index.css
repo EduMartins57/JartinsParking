@@ -1,0 +1,39 @@
+html{
+    width: 50%;
+    margin-left: 25%;
+    background-color: var(--cor5);
+}
+
+#background, .container{
+    background-color: var(--cor5);
+}
+
+#form{
+    background-color: var(--cor3);
+    border-radius: 20px;
+    border: none;
+    margin-top: 5%;
+   
+}
+
+.text-center {
+    border-color: var(--cor5);
+}
+
+#title{
+    font-family: cursive;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 3%;
+}
+
+p, #h4 {
+    color: black;
+}
+
+.alert.alert-success {
+    background-color: var(--cor03);
+    border: none;
+}
+
+

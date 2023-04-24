@@ -1,0 +1,13 @@
+#teste{
+    background: var(--cor1);
+    border: none;
+}
+
+#teste:hover{
+    background: var(--cor5); 
+}
+
+#color{
+    background-color: white;
+    border-radius: 0.25rem;
+}

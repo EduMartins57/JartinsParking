@@ -1,0 +1,12 @@
+input {
+    border: none;
+    background: var(--cor);
+}
+
+#excluiVeiculo{
+    padding-left: 5%;
+}
+
+p{
+    font-weight: bold;
+}

@@ -1,0 +1,62 @@
+html{
+    width: 50%;
+    margin-left: 25%;
+    background-color: var(--cor5);
+}
+
+#background{
+    background-color: var(--cor5); 
+}
+.container{
+    background-color: var(--cor3);
+    border: 1px solid;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 25px;
+}
+
+#title{
+    font-family: cursive;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 3%;
+}
+
+#h3{
+    font-family: cursive;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#form{
+    background-color: var(--cor3);
+    border-radius: 20px;
+    border: none;
+    margin-top: 5%;
+}
+
+label {
+    font-weight: bold;
+}
+
+#color{
+    border-radius: 0.25rem;
+}
+
+#color:focus-within, #color:hover{
+    border: 2px solid var(--cor1);
+}
+
+#cadastrarBt{
+    background-color: var(--cor1);
+    border: none;
+}
+#cadastrarBt:hover{
+    background-color: var(--cor5);
+}
+
+.hora, #hora{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
