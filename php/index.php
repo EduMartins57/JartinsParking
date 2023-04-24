@@ -4,7 +4,7 @@
 <body id="background">
     <?php
         session_start();
-        include "cabecalho.php";
+        include "../php/view/cabecalho.php";
     ?>
     <form action="" id="form">
         <h1 class="text-center" id="title">Jartins Parking</h1>
@@ -13,10 +13,7 @@
                 <p> Continue para a tela de login</p>
         
         <p class="text-center">
-            <a class="btn btn-lg btn-block btn-secondary" id="loginButton" href="login.php">Continua</a>
+            <a class="btn btn-lg btn-block btn-secondary" id="loginButton" href="../php/view/login.php">Continua</a>
         </p>
-    <?php
-    include "rodape.php";
-    ?>
     </form>
 </body>

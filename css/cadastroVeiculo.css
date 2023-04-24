@@ -55,7 +55,7 @@ label {
     background-color: var(--cor5);
 }
 
-.hora{
+.hora, #hora{
     width: 100%;
     text-align: center;
     padding: 5px;

@@ -1,2 +1,0 @@
-# JartinsParking
-Jartins Parking Projects
