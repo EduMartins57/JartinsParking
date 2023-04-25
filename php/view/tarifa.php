@@ -5,17 +5,19 @@
 <?php
     session_start();
     include "cabecalho.php";
+    date_default_timezone_set('America/Sao_Paulo');
     echo '<h1 class="text-center">Histórico de tarifas</h1>';
     echo "<table class = 'table table-striped table-bordered'>";
     include "../../config/conecta.php";
     $resultado = mysqli_query($conn, "select * from tarifas");
 
     while($tarifas = mysqli_fetch_assoc($resultado)) {
+        date_default_timezone_set("America/Sao_Paulo");
         echo "<form  method='post'><tr><td id='tarifa'>Valor  
                 <input type='number' name='tarifa'  readonly=''
-                       value=".$tarifas['tarifa']."> Entrada                     
-                <input type='datetime' id='hora' name='entrada' readonly=''
-                       value=".date("d-m-Y-h:i:s",strtotime($tarifas['entrada']))."></td>";
+                       value=".$tarifas['tarifa']."> Entrada        
+                       <input type='datetime' name='entrada' readonly
+                       value=".date("Y-m-d-h:i:s",strtotime($tarifas['entrada']))."></td>";
         
                     }
                     echo "</table>";

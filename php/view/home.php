@@ -29,6 +29,14 @@
             <a class="btn btn-lg btn-block btn-secondary" id="loginButton" href="listarVeiculos.php">Visualizar Veiculos</a>
         </p>
 
+        <p class="text-center">
+            <a class="btn btn-lg btn-block btn-secondary" id="loginButton" href="listarLojas.php">Histórico de Lojas</a>
+        </p>
+
+        <p class="text-center">
+            <a class="btn btn-lg btn-block btn-secondary" id="loginButton" href="tarifa.php">Tarifa atual</a>
+        </p>
+
     <?php
     include "rodape.php";
     ?>
