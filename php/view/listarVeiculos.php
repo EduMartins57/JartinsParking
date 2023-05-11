@@ -29,16 +29,21 @@
                        value=".$veiculos['marca'].">
                 <input type='text' name='entrada' readonly
                        value=".date("Y-m-d-h:i:s",strtotime($veiculos['entrada']))."></td>";
-              
-              
-       //echo "<td id='excluiVeiculo'><button class='btn btn-danger'>Retirada</button></td></tr></form>";
-       echo "<td id='excluiVeiculo'><p class='text-center'>
-            <a class='btn btn-lg btn-block btn-secondary' id='loginButton' href='visualizaVeiculos.php'>Detalhe</a></p></td>";
+                     
+       ?>    
         
-    }
+       <td id='excluiVeiculo'><p class='text-center'>
+            <a class='btn btn-lg btn-block btn-secondary' id='loginButton' href="visualizaVeiculos.php?ID=
+              <?php echo $veiculos['ID'];?>">Detalhe</a></p></td>             
+                       
+       <?php 
+          }   
+       ?>
+        
+    <?php
     echo "</table>";
         include "rodapeMenu.php";
-?>
+        ?>  
 </body>
 
 

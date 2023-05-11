@@ -12,7 +12,9 @@
     echo '<h3 class="text-center" id="h3">Carro no estacionamento</h3>';
     echo "<table class = 'table table-striped table-bordered'>";
     include "../../config/conecta.php";
-    $resultado = mysqli_query($conn, "select * from veiculos where modelo='gol';");
+    $ID=$_GET['ID'];
+    $resultado=mysqli_query($conn,"select * from veiculos where ID='$ID'");
+    $cnt=1;
 
     while($veiculos = mysqli_fetch_assoc($resultado)) {
        $entrada = $veiculos['entrada'];
