@@ -15,7 +15,7 @@
     $ID=$_GET['ID'];
     $resultado=mysqli_query($conn,"select * from veiculos where ID='$ID'");
     $cnt=1;
-
+    
     while($veiculos = mysqli_fetch_assoc($resultado)) {
        $entrada = $veiculos['entrada'];
                 echo "<form action='../controller/removeVeiculo.php' method='post'><tr><td id='excluiVeiculo'>
@@ -40,10 +40,9 @@
        echo "<form action='removeVeiculos.php' method='post'>";
        echo "<td id='excluiVeiculo' class='excluiVeiculo'><button class='btn btn-danger'>Retirada</button></td></tr></form>"; 
        
-       //$tarifa=mysqli_query($conn,"select * from tarifas");
-       $tarifa=$_SESSION['tarifas'];
-          $entrada = $veiculos['entrada'];
-          $saida = date("Y-m-d H:i:s");
+       $entrada = $veiculos['entrada'];
+       //;date_default_timezone_set("America/Sao_Paulo");
+       $saida = date("Y-m-d H:i:s");  
           $permanencia = ceil(((strtotime($saida) - strtotime($entrada))/3600));
           if($permanencia>1){
            $tarifa = round(($_SESSION['tarifa'] + (($permanencia-1)*($_SESSION['tarifa']*0.5))),2);
@@ -52,14 +51,14 @@
     
     echo "</table>";
         
-       $entrada = date("Y-m-d H:i:s");?>
+    ?>
              
        <form action="../view/fecha_conta.php"  method="POST" class="form-horizontal">      
               <p><b>Entrada:
-              </b> &nbsp; <input  readonly name="entrada" value="<?php   echo $entrada;?>"></p>
+              </b> &nbsp; <input readonly type="datetime-local" name="entrada" value = "<?php   echo $entrada;?>"></p>
 
               <p><b>Saída:
-              </b> &nbsp; <input readonly type="datetime-local" name="Saida" value = "<?php   echo $saida;?>"></p>
+              </b> &nbsp; <input readonly type="datetime-local" name="saida" value = "<?php   echo $saida;?>"></p>
 
               <p><b>Permanência:
               </b> &nbsp; <input readonly name="Permanencia" value ="<?php echo $permanencia;?>"></p>     
@@ -79,7 +78,7 @@
                      value="<?php echo $TarifaEstacionamento;?>" required> </p>
                      <?php echo "<pre>".$_SESSION['tarifa'].' + ('.($permanencia-1).'*'.($_SESSION['tarifa']/2).' ) = '.$TarifaEstacionamento."</pre>";?>
               
-              <p><b>Status : 
+              <p><b>Status
               </b> <select type= "readonly"name="Status" class="form-control"><option value="Fora">Veiculo Fora</option>
               </select></p>
        </form>  
@@ -90,7 +89,7 @@
 </body>
 
 
-<input type="hidden" value="<?php echo $veiculos['ID'];?>" name="ID">
+
 
 
 

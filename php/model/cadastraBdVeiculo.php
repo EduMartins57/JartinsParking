@@ -9,12 +9,14 @@
 		$cor = $_POST['cor'];
 		$marca =  $_POST['marca'];
 		$entrada =  date("Y-m-d H:i:s");
+		//$saida = date("Y-m-d H:i:s");
 
 		include "../../config/conecta.php";
 		$query = "insert into veiculos (automovel, placa, modelo, cor, marca, entrada) 
 			values ('$automovel','$placa','$modelo', '$cor', '$marca', '$entrada')";
 		mysqli_query($conn,$query) or die(mysqli_error($conn));
 		include "../view/sucessoCadastro.php";
+
 	?>
 </body>
 
