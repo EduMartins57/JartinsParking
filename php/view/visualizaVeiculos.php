@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="../../css/all.css">
 <link rel="stylesheet" href="../../css/ListarVeiculos.css">
 <link rel="stylesheet" href="../../css/carro.css">
+<link rel="stylesheet" href="../../css/cadastroVeiculo.css">
 
 <body id="background">
 <?php
@@ -37,22 +38,17 @@
                 </td>";
        
       
-       echo "<form action='removeVeiculos.php' method='post'>";
-       echo "<td id='excluiVeiculo' class='excluiVeiculo'><button class='btn btn-danger'>Retirada</button></td></tr></form>"; 
-       
+      
+       ;date_default_timezone_set("America/Sao_Paulo");
        $entrada = $veiculos['entrada'];
-       //;date_default_timezone_set("America/Sao_Paulo");
        $saida = date("Y-m-d H:i:s");  
-          $permanencia = ceil(((strtotime($saida) - strtotime($entrada))/3600));
-          if($permanencia>1){
-           $tarifa = round(($_SESSION['tarifa'] + (($permanencia-1)*($_SESSION['tarifa']*0.5))),2);
-          }
+       $permanencia = ceil(((strtotime($saida) - strtotime($entrada))/3600));
+          
     }
     
     echo "</table>";
         
-    ?>
-             
+    ?>  
        <form action="../view/fecha_conta.php"  method="POST" class="form-horizontal">      
               <p><b>Entrada:
               </b> &nbsp; <input readonly type="datetime-local" name="entrada" value = "<?php   echo $entrada;?>"></p>
@@ -73,16 +69,26 @@
                             <?php } ?>             
                      </select></p>
 
-              <p><b>Tarifa do Estacionamento: 
-              </b><input type="hidden" class="form-control" name="TarifaEstacionamento" 
-                     value="<?php echo $TarifaEstacionamento;?>" required> </p>
-                     <?php echo "<pre>".$_SESSION['tarifa'].' + ('.($permanencia-1).'*'.($_SESSION['tarifa']/2).' ) = '.$TarifaEstacionamento."</pre>";?>
-              
+              <?php                   
+              $resultado=mysqli_query($conn,"select * from tarifas");
+                           
+              while ($tarifas=mysqli_fetch_array($resultado)){
+              $tarifa = $tarifas['tarifa'];
+                     echo "
+                     <form action='' method='post'><tr><td id='excluiVeiculo'><div><p>Tarifa do Estacionamento: 
+                            <input type='text' name='tarifa' id='color' readonly
+                            value=".$tarifas['tarifa'].">
+                            </div>  
+                     </td>";    
+              }
+              ?>  
+            
               <p><b>Status
               </b> <select type= "readonly"name="Status" class="form-control"><option value="Fora">Veiculo Fora</option>
               </select></p>
-       </form>  
+       </form> 
 
+       <button type="submit" class="btn btn-lg btn-block btn-primary" id="cadastrarBt">Retirada</button>
        <?php 
        include "rodapeMenu.php";
        ?>            

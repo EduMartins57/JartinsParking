@@ -27,13 +27,13 @@
             <input id="color" type="text" class="form-control" name="marca" placeholder="Dígite o marca do Veículo">
         </div>
         <div class="form-group">
-            <div>
-          
-            <?php ;date_default_timezone_set("America/Sao_Paulo");
-            $Entrada = date("Y-m-d H:i:s");?>
-            <p><b>Entrada:</b> &nbsp; <input readonly type="datetime-local" name="Entrada" value = "<?php   echo $Entrada;?>"></p>
+          <?php 
+          ;date_default_timezone_set("America/Sao_Paulo");
+          $entrada = date("Y-m-d H:i:s");?>
+          <label for="entrada">Entrada:</label>
+          <input id="color" class="hora" readonly type="datetime-local"  name="entrada" value = "<?php echo $entrada;?>">
         </div>
-        </div>
+
         <button type="submit" class="btn btn-lg btn-block btn-primary" id="cadastrarBt">Cadastrar</button>
     </form>
     

@@ -8,8 +8,7 @@
 		$modelo =  $_POST['modelo'];
 		$cor = $_POST['cor'];
 		$marca =  $_POST['marca'];
-		$entrada =  date("Y-m-d H:i:s");
-		//$saida = date("Y-m-d H:i:s");
+		$entrada =  $_POST['entrada'];
 
 		include "../../config/conecta.php";
 		$query = "insert into veiculos (automovel, placa, modelo, cor, marca, entrada) 

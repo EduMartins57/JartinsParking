@@ -16,6 +16,8 @@
     while($veiculos = mysqli_fetch_assoc($resultado)) {
       
                 echo "<form action='visualizaVeiculos.php' method='post'><tr><td id='excluiVeiculo'>
+                <input type='text' name='ID' readonly
+                       value=".$veiculos['ID'].">
                 <input type='text' name='automovel' readonly
                        value=".$veiculos['automovel'].">
                 <input type='text' name='placa' readonly
@@ -26,11 +28,7 @@
                        value=".$veiculos['cor'].">
                 <input type='text' name='marca' readonly
                        value=".$veiculos['marca'].">
-                       
-                      
-                       <?php date_default_timezone_set('America/Sao_Paulo');?>
-                <input type='datetime-zone' name='Entrada' readonly
-                       value=".date("d-m-Y.H:i:s",strtotime($veiculos['entrada']))."></td>";
+                </td>";
                      
        ?>    
         
