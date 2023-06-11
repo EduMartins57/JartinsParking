@@ -37,7 +37,7 @@ Instruções podem ser achadas nesta [página](https://docs.github.com/pt/reposi
 
 Este projeto está sob a licença [MIT](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt).
 
-## 🖇️ Professor 
+## 🖇️ Professora 
 
 * **[Bianca Pedrosa](https://github.com/BiancaPedrosa)** - *Professor* 
 

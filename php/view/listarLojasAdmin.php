@@ -20,6 +20,6 @@
 
     echo "</table>";
                 
-    include "rodapeMenu.php";
+    include "rodapeAdmin.php";
 ?>
 </body>

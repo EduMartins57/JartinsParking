@@ -9,6 +9,6 @@
     <h1 class="text-center">Autenticação</h1>
     <h3 class="text-center alert-danger" id="displayName">Ocorreu um erro</h3>
  <?php
-	 include "rodapeMenu.php";
+	 include "rodapeMenuAdmin.php";
 ?>
 </body>

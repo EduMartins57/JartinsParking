@@ -24,9 +24,13 @@
 		<p class="text-center">
             <a class="btn btn-lg btn-block btn-secondary" id="loginButton" href="cadastroVeiculo.php">Cadastro de Veiculo</a>
         </p>
-
+        
 		<p class="text-center">
-            <a class="btn btn-lg btn-block btn-secondary" id="loginButton" href="listarVeiculos.php">Visualizar Veiculos</a>
+            <a class="btn btn-lg btn-block btn-secondary" id="loginButton" href="listarVeiculos.php">Visualizar Veiculos Dentro</a>
+        </p>
+
+        <p class="text-center">
+            <a class="btn btn-lg btn-block btn-secondary" id="loginButton" href="listarVeiculosFora.php">Visualizar Veiculos Fora</a>
         </p>
 
         <p class="text-center">

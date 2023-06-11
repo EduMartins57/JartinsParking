@@ -12,7 +12,7 @@
     $resultado = mysqli_query($conn, "select * from Usuario");
 
     while($usuario = mysqli_fetch_assoc($resultado)) {
-        echo "<form action='../controller/remove.php' method='post'><tr><td id='excluiUsuario'>
+        echo "<form action='../model/remove.php' method='post'><tr><td id='excluiUsuario'>
                 <input type='text' name='id' 
                        value=".$usuario['login']."></td>";
         echo "<td id='excluiUsuario'><button class='btn btn-danger'>excluir</button></td></tr></form>";

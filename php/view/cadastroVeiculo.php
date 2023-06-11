@@ -5,10 +5,11 @@
     <?php include "cabecalho.php";?>
         <h1 class="text-center" id="title">Cadastro de Veiculos</h1>
         <h3 id="h3">Cadastre seu veículo no estacionamento</h3>
-    <form method="post" action="../model/cadastraBdVeiculo.php" id="form">
+        
+    <form method="post" action="../model/veiculosDentro.php" id="form">
         <div class="form-group">
             <label for="automovel">Veiculo</label>
-            <input id="color" type="text" class="form-control" name="automovel" placeholder="Dígite teste do Veículo">
+            <input id="color" type="text" class="form-control" name="automovel" placeholder="Dígite Carro ou Moto">
         </div>
         <div class="form-group">
             <label for="placa">Placa</label>

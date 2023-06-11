@@ -8,7 +8,7 @@
 ?>
     <h1 class="text-center">Tarifa</h1>
 
-    <form method="post" action="../model/cadastraBdTarifa.php">
+    <form method="post" action="../model/alteraBdTarifa.php">
     <div class="form-group">
         <label for="tarifa">Tarifa</label>
         <input type="number" class="form-control" name="tarifa" placeholder="Digite o valor da tarifa">
@@ -23,7 +23,7 @@
 
     <form method="post" action="tarifa.php">
         <button class="btn btn-lg btn-block btn-info" id="teste">Atualizar tarifa</button>
-</form>
+    </form>
 <?php
 	 include "rodapeAdmin.php";
 ?>

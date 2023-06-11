@@ -5,7 +5,7 @@
 	<?php
 		include "cabecalho.php";
 	?>
-		<h1 class="text-center" id="title">Cadastro realizado</h1>
+		<h1 class="text-center" id="title">Retirada do automovel</h1>
 		<h3 class="text-center alert alert-success" id="displayName">Sucesso</h3>
 		<p class="text-center">
 	<?php

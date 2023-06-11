@@ -1,5 +1,4 @@
 CREATE TABLE tarifas(
-
-  tarifa decimal (10) primary key,
+  tarifa decimal (11) primary key,
   entrada datetime(6) NOT NULL
 );
